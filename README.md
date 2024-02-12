@@ -9,12 +9,11 @@
 
 This code snippet executes the following tasks:
 
-1. Imports the ExchangeOnlineManagement module.
-2. Define a wildcard search query `$searchValue` based on the search parameter `$datasource.searchValue`
-3. Creates a session to Exchange Online.
-4. List all mailboxes in Exchange On-Premises that match the wildcard search query `$searchValue` in their name or email addresses using the cmdlet: [Get-Mailbox](https://learn.microsoft.com/en-us/powershell/module/exchange/get-mailbox?view=exchange-ps)
+1. Define a wildcard search query `$searchValue` based on the search parameter `$datasource.searchValue`
+2. Creates a session to Exchange using Remote PowerShell.
+3. List all mailboxes in Exchange On-Premises that match the wildcard search query `$searchValue` in their name or email addresses using the cmdlet: [Get-Mailbox](https://learn.microsoft.com/en-us/powershell/module/exchange/get-mailbox?view=exchange-ps)
    > The filter property **-filter** accepts different values [See the Microsoft Docs page](https://learn.microsoft.com/en-us/powershell/module/exchange/get-mailbox?view=exchange-ps#-filter)
-5. Return a hash table for each user account using the `Write-Output` cmdlet.
+4. Return a hash table for each user account using the `Write-Output` cmdlet.
 
 > To view an example of the data source output, please refer to the JSON code pasted below.
 
